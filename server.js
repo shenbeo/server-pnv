@@ -13,7 +13,7 @@ dotenv.config()
 const app = express();
 app.use(cors(
     {
-        origin: ["https://pnv-store.vercel.app"],
+        origin: ["https://pnv-vespa.vercel.app"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
