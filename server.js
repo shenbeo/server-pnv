@@ -240,7 +240,7 @@ app.post('/loginClient', (req, res) => {
                 if(response) {
                     const token = jwt.sign({role: "user_client", id: result[0].id}, "jwt-secret-key", {expiresIn: '1d'});
                     res.cookie('token', token);
-                    return res.json({Status: "Success", id: result[0].id, Statuss: "I am verifying your login account, please wait a few minutes"})
+                    return res.json({Status: "Success", id: result[0].id, Success: "I am verifying your login account, please wait a few minutes"})
                 } else {
                     return res.json({Status: "Error", Error: "Wrong Email or Password"});
                 }
